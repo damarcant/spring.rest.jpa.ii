@@ -30,7 +30,6 @@ public class LibroController {
 	@Autowired
 	private LibroFacade libroFacade;
 	 
-	//la respuesta será una entidad con una página de recursos de tipo Libro
 	@RequestMapping(method = RequestMethod.GET)	 
 	public ResponseEntity<Page<Libro>> findAll(Pageable pageable) {		
 		Page<Libro> entityPage = libroFacade.findAll(pageable);
@@ -67,7 +66,7 @@ public class LibroController {
 		libroFacade.delete(id);		 
 	}
 	 
-	//----------------------------------------- BÚSQUEDAS---------------------------------------------------
+	//----------------------------------------- SEARCH ---------------------------------------------------
 	
 	@RequestMapping(value = "/q", method = RequestMethod.GET)
 	public List<Libro> findByTitulo(@RequestParam(required = false, value = "titulo") String titulo, 
