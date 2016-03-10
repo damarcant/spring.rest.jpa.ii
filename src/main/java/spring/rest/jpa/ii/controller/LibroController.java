@@ -66,7 +66,7 @@ public class LibroController {
 	public void delete(@PathVariable(value = "id") Integer id) {
 		libroFacade.delete(id);		 
 	}
-	
+	 
 	//----------------------------------------- BÚSQUEDAS---------------------------------------------------
 	
 	@RequestMapping(value = "/q", method = RequestMethod.GET)
