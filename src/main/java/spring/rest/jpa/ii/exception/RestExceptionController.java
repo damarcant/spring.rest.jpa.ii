@@ -7,23 +7,21 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus; 
 
 /**
- * La anotaciÛn @ControllerAdvice aplicar· todos los gestores 
+ * La anotaci√≥n @ControllerAdvice aplicar√° todos los gestores 
  * de excepciones definidos en esta clase a todos los controladores 
  * anotados con @RequestMapping.
  * 
- * De esta forma, cuando alg˙n mÈtodo de nuestra API produzca el 
- * lanzamiento de la excepciÛn ResourceNotFoundException,
- * se invocar· autom·ticamente el mÈtodo resourceNotFound, 
- * devolviendo el mensaje configurado y un cÛdigo de error 404, 
- * gracias a la anotaciÛn @ResponseStatus
+ * De esta forma, cuando alg√∫n m√©todo de nuestra API produzca el 
+ * lanzamiento de la excepci√≥n ResourceNotFoundException,
+ * se invocar√° autom√°ticamente el m√©todo resourceNotFound, 
+ * devolviendo el mensaje configurado y un c√≥digo de error 404, 
+ * gracias a la anotaci√≥n @ResponseStatus
  * 
- * @author dmartin
- *
  */
-@ControllerAdvice //anotaciÛn para aplicar a todos los controladores 
+@ControllerAdvice //anotaci√≥n para aplicar a todos los controladores 
 public class RestExceptionController {
 
-	// se invoca si alg˙n metodo hace throw de ResourceNotFoundException 
+	// se invoca si alg√∫n metodo hace throw de ResourceNotFoundException 
 	@ExceptionHandler(ResourceNotFoundException.class)
 	@ResponseStatus(HttpStatus.NOT_FOUND/*404*/)
 	@ResponseBody
