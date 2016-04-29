@@ -12,14 +12,13 @@ import spring.rest.jpa.ii.bean.Libro;
 import spring.rest.jpa.ii.exception.ResourceNotFoundException;
 import spring.rest.jpa.ii.repository.LibroJpaRepository;
 
-
 @Service
 public class LibroFacade {
 	
 	@Autowired
 	private LibroJpaRepository libroJpaRepository;
 
-	//devuelve a una p·gina de libros
+	//devuelve a una p√°gina de libros
 	public Page<Libro> findAll(Pageable pageable) { 
 		return libroJpaRepository.findAll(pageable);
 	} 
