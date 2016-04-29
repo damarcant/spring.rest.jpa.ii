@@ -18,7 +18,7 @@ public class LibroFacade {
 	@Autowired
 	private LibroJpaRepository libroJpaRepository;
 
-	//devuelve a una página de libros
+	//devuelve a una pag. de libros
 	public Page<Libro> findAll(Pageable pageable) { 
 		return libroJpaRepository.findAll(pageable);
 	} 
