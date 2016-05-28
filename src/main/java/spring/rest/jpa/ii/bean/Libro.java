@@ -33,7 +33,7 @@ public class Libro {
 	//a boolean
 	@Type(type = "org.hibernate.type.NumericBooleanType")
 	@Column 
-	private boolean ebook; 
+	private boolean ebook;  
 	
 	@JsonFormat(pattern="yyyy-MM-dd HH:mm", timezone="GMT+2"/*ya que en bd no tiene timezone.*/)
 	@Temporal(TemporalType.TIMESTAMP) 
