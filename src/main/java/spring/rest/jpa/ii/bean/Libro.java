@@ -30,12 +30,12 @@ public class Libro {
 	@Column(name = "anio_publicacion") 
 	private Integer anioPublicacion;
 	
-	//de número a boolean
+	//a boolean
 	@Type(type = "org.hibernate.type.NumericBooleanType")
 	@Column 
 	private boolean ebook; 
 	
-	@JsonFormat(pattern="yyyy-MM-dd HH:mm", timezone="GMT+2"/*ya que en bd está sin timezone.*/)
+	@JsonFormat(pattern="yyyy-MM-dd HH:mm", timezone="GMT+2"/*ya que en bd no tiene timezone.*/)
 	@Temporal(TemporalType.TIMESTAMP) 
 	@Column(name = "timestamp_insercion") 
 	private Date timestampInsercion;
