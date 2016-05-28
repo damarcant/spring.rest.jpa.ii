@@ -35,8 +35,8 @@ public class Libro {
 	@Column 
 	private boolean ebook; 
 	
-	@JsonFormat(pattern="yyyy-MM-dd HH:mm", timezone="GMT+1"/*ya que en bd está sin timezone. el manager muestra con +1 también*/)
-	@Temporal(TemporalType.TIMESTAMP) //PROBAR CON DATE Y TIME, para ver diferentes resultados
+	@JsonFormat(pattern="yyyy-MM-dd HH:mm", timezone="GMT+2"/*ya que en bd está sin timezone.*/)
+	@Temporal(TemporalType.TIMESTAMP) 
 	@Column(name = "timestamp_insercion") 
 	private Date timestampInsercion;
 
